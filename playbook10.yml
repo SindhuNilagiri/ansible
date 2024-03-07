@@ -1,0 +1,13 @@
+---
+- name: Implementing host scope varaibles
+  hosts: 172.31.36.211
+  tasks:
+    - name: create user
+      user:
+        name: "{{a}}"
+        password: "{{b}}"
+        home: "{{c}}"
+        uid: "{{d}}"
+        shell: "{{e}}"
+        comment: "{{f}}"
+...

@@ -1,0 +1,16 @@
+---
+- name: Fetch file from server1
+  hosts: 172.31.13.204
+  tasks:
+    - name: Fetch file
+      fetch:
+        src: file200
+        dest: /tmp
+- name: copy file to server2
+  hosts: 172.31.1.11
+  tasks:
+    - name: copy file
+      copy:
+        src: /tmp/172.31.13.204
+        dest: /tmp
+...
